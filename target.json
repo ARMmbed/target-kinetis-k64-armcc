@@ -1,0 +1,32 @@
+{
+  "name": "frdm-k64f-armcc",
+  "version": "0.0.0",
+  "similarTo": [
+    "frdm-k64f",
+    "k64f",
+    "ksdk-mcu",
+    "mk64fn1m0vmd12",
+    "mk64fn1m0",
+    "mk64fn",
+    "freescale",
+    "cortex-m4",
+    "armv7-m",
+    "arm",
+    "armcc",
+    "*"
+  ],
+  "toolchain": "CMake/toolchain.cmake",
+  "debug-server": [
+    "JLinkGDBServer",
+    "-if",
+    "SWD",
+    "-device",
+    "MK64FN1M0xxx12"
+  ],
+  "debug": [
+    "arm-none-eabi-gdb",
+    "$program",
+    "--eval",
+    "target remote localhost:2331"
+  ]
+}
