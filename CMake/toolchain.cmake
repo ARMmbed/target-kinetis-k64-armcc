@@ -26,4 +26,10 @@ include(CMakeForceCompiler)
 
 cmake_force_c_compiler(armcc ARMCC)
 cmake_force_cxx_compiler(armcc ARMCC)
-
+find_program(CMAKE_LINKER armlink)
+find_program(CMAKE_AR armar)
+# have to set cache variables so that these variables are still set when CMAKE_C_LINK_EXECUTABLE etc. are interpreted
+# set(CMAKE_LINKER "${CMAKE_LINKER_}" CACHE PATH "linker" FORCE)
+# set(CMAKE_AR "${CMAKE_AR_}" CACHE PATH "archiver" FORCE)
+message("found linker: ${CMAKE_LINKER}")
+message("found archiver: ${CMAKE_AR}")

@@ -5,14 +5,11 @@ message("mbedOS-GNU-CXX.cmake included")
 # can't test the compiler because it cross-compiles
 set(CMAKE_CXX_COMPILER_WORKS TRUE)
 
-# !!! FIXME: CMAKE_AR and CMAKE_LINKER? should be set and used correctly, instead of calling
-# armar
-
 set(CMAKE_CXX_CREATE_SHARED_LIBRARY "echo 'shared libraries not supported' && 1")
 set(CMAKE_CXX_CREATE_SHARED_MODULE  "echo 'shared modules not supported' && 1")
-set(CMAKE_CXX_CREATE_STATIC_LIBRARY "armar -cr <LINK_FLAGS> <TARGET> <OBJECTS>")
+set(CMAKE_CXX_CREATE_STATIC_LIBRARY "<CMAKE_AR> -cr<LINK_FLAGS> <TARGET> <OBJECTS>")
 set(CMAKE_CXX_COMPILE_OBJECT        "${ARMCC_ENV} <CMAKE_CXX_COMPILER> ${YOTTA_TARGET_DEFINITIONS} <DEFINES> -c <FLAGS> --cpp -o <OBJECT> <SOURCE>")
-set(CMAKE_CXX_LINK_EXECUTABLE       "armlink -o <TARGET> <OBJECTS> <LINK_LIBRARIES> <CMAKE_CXX_LINK_FLAGS> <LINK_FLAGS>")
+set(CMAKE_CXX_LINK_EXECUTABLE       "<CMAKE_LINKER> -o <TARGET> <OBJECTS> <LINK_LIBRARIES> <CMAKE_CXX_LINK_FLAGS> <LINK_FLAGS>")
 
 set(CMAKE_CXX_FLAGS_INIT "${_C_FAMILY_FLAGS_INIT} --no_exceptions")
 set(CMAKE_CXX_FLAGS_DEBUG_INIT          "${CMAKE_CXX_FLAGS_INIT} -O0 -g")
@@ -23,3 +20,4 @@ set(CMAKE_INCLUDE_SYSTEM_FLAG_CXX "-isystem ")
 
 set(CMAKE_CXX_OUTPUT_EXTENSION ".o")
 
+set(CMAKE_CXX_LINK_FLAGS "")
