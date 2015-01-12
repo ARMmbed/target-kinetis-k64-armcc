@@ -2,8 +2,12 @@
 
 message("mbedOS-GNU-C.cmake included")
 
+if(CMAKE_HOST_SYSTEM_NAME MATCHES "Windows")
+    set(ARMCC_ENV "")
+else()
+    set(ARMCC_ENV "LC_ALL=en_US.utf8 LANG=en_US.utf8")
+endif()
 
-set(ARMCC_ENV "LC_ALL=en_US.utf8 LANG=en_US.utf8")
 
 # Override the link rules:
 set(CMAKE_C_CREATE_SHARED_LIBRARY "echo 'shared libraries not supported' && 1")
