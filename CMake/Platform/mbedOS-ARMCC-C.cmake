@@ -15,6 +15,7 @@ set(CMAKE_C_CREATE_SHARED_MODULE  "echo 'shared modules not supported' && 1")
 set(CMAKE_C_CREATE_STATIC_LIBRARY "<CMAKE_AR> -cr<LINK_FLAGS> <TARGET> <OBJECTS>")
 set(CMAKE_C_COMPILE_OBJECT        "${ARMCC_ENV} <CMAKE_C_COMPILER> ${YOTTA_TARGET_DEFINITIONS} <DEFINES> --gnu -c <FLAGS> -o <OBJECT> <SOURCE>")
 set(CMAKE_C_LINK_EXECUTABLE       "<CMAKE_LINKER> -o <TARGET> <OBJECTS> <LINK_LIBRARIES> <CMAKE_C_LINK_FLAGS> <LINK_FLAGS>")
+set(CMAKE_ASM_COMPILE_OBJECT      "${ARMCC_ENV} <CMAKE_C_COMPILER> ${YOTTA_TARGET_DEFINITIONS} <DEFINES> --gnu -c <FLAGS> -o <OBJECT> <SOURCE>")
 
 
 set(_C_FAMILY_FLAGS_INIT "--cpu=Cortex-M4.fp --split_sections --apcs=interwork --restrict --no_rtti --multibyte-chars -D__thumb2__")
