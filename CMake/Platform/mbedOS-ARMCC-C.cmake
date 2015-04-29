@@ -20,18 +20,18 @@ set(CMAKE_ASM_COMPILE_OBJECT      "${ARMCC_ENV} <CMAKE_C_COMPILER> ${YOTTA_TARGE
 
 set(_C_FAMILY_FLAGS_INIT "--cpu=Cortex-M4.fp --split_sections --apcs=interwork --restrict --no_rtti --multibyte-chars -D__thumb2__")
 set(CMAKE_C_FLAGS_INIT                "--c99 ${_C_FAMILY_FLAGS_INIT}")
-set(CMAKE_C_FLAGS_DEBUG_INIT          "${CMAKE_C_FLAGS_INIT} -O0 -g")
-set(CMAKE_C_FLAGS_MINSIZEREL_INIT     "${CMAKE_C_FLAGS_INIT} -Ospace -DNDEBUG")
-set(CMAKE_C_FLAGS_RELEASE_INIT        "${CMAKE_C_FLAGS_INIT} -Ospace -DNDEBUG")
-set(CMAKE_C_FLAGS_RELWITHDEBINFO_INIT "${CMAKE_C_FLAGS_INIT} -Ospace -g -DNDEBUG")
+set(CMAKE_C_FLAGS_DEBUG_INIT          "-O0 -g")
+set(CMAKE_C_FLAGS_MINSIZEREL_INIT     "-Ospace -DNDEBUG")
+set(CMAKE_C_FLAGS_RELEASE_INIT        "-Ospace -DNDEBUG")
+set(CMAKE_C_FLAGS_RELWITHDEBINFO_INIT "-Ospace -g -DNDEBUG")
 set(CMAKE_INCLUDE_SYSTEM_FLAG_C "-isystem ")
 
 
 set(CMAKE_ASM_FLAGS_INIT  "--cpu=Cortex-M4.fp --gnu --split_sections --apcs=interwork --restrict --no_rtti")
-set(CMAKE_ASM_FLAGS_DEBUG_INIT          "${CMAKE_ASM_FLAGS_INIT} -O0 -g")
-set(CMAKE_ASM_FLAGS_MINSIZEREL_INIT     "${CMAKE_ASM_FLAGS_INIT} -O3 -Ospace -DNDEBUG")
-set(CMAKE_ASM_FLAGS_RELEASE_INIT        "${CMAKE_ASM_FLAGS_INIT} -O3 -Ospace -DNDEBUG")
-set(CMAKE_ASM_FLAGS_RELWITHDEBINFO_INIT "${CMAKE_ASM_FLAGS_INIT} -O3 -Ospace -g -DNDEBUG")
+set(CMAKE_ASM_FLAGS_DEBUG_INIT          "-O0 -g")
+set(CMAKE_ASM_FLAGS_MINSIZEREL_INIT     "-O3 -Ospace -DNDEBUG")
+set(CMAKE_ASM_FLAGS_RELEASE_INIT        "-O3 -Ospace -DNDEBUG")
+set(CMAKE_ASM_FLAGS_RELWITHDEBINFO_INIT "-O3 -Ospace -g -DNDEBUG")
 set(CMAKE_INCLUDE_SYSTEM_FLAG_ASM  "-isystem ")
 
 
