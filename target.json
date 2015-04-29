@@ -29,7 +29,8 @@
     "armcc",
     "lwip",
     "lwip-k64f",
-    "eth-k64f"
+    "eth-k64f",
+    "mbed"
   ],
   "toolchain": "CMake/toolchain.cmake",
   "debug": [
