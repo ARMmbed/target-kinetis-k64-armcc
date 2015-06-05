@@ -1,6 +1,6 @@
 {
   "name": "frdm-k64f-armcc",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Official mbed build target for the mbed frdm-k64f development board, using the armcc toolchain.",
   "licenses": [
     {
@@ -9,7 +9,7 @@
     }
   ],
   "inherits": {
-     "mbed-armcc": "~0.0.0"
+    "mbed-armcc": "~0.0.0"
   },
   "keywords": [
     "mbed-target:k64f",
@@ -18,8 +18,7 @@
     "frdm-k64f",
     "armcc"
   ],
-  "config": {
-  },
+  "config": {},
   "similarTo": [
     "frdm-k64f",
     "k64f",
