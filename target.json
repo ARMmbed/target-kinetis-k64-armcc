@@ -8,6 +8,9 @@
       "type": "Apache-2.0"
     }
   ],
+  "inherits": {
+     "mbed-armcc": "~0.0.0"
+  },
   "keywords": [
     "mbed-target:k64f",
     "mbed-official",
@@ -15,6 +18,8 @@
     "frdm-k64f",
     "armcc"
   ],
+  "config": {
+  },
   "similarTo": [
     "frdm-k64f",
     "k64f",
@@ -25,20 +30,11 @@
     "freescale",
     "cortex-m4",
     "armv7-m",
-    "arm",
-    "armcc",
     "lwip",
     "lwip-k64f",
-    "eth-k64f",
-    "mbed"
+    "eth-k64f"
   ],
   "toolchain": "CMake/toolchain.cmake",
-  "debug": [
-    "valinor",
-    "--target",
-    "K64F",
-    "$program"
-  ],
   "scripts": {
     "debug": [
       "valinor",
