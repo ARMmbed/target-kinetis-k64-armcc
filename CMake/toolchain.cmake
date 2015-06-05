@@ -16,10 +16,10 @@ set(CMAKE_SYSTEM_PROCESSOR "armv7-m")
 # definition that you're about to add to rely on the TARGET_LIKE_XXX
 # definitions that yotta provides based on the target.json file.
 #
-set(YOTTA_TARGET_DEFINITIONS "-DCPU_MK64FN1M0VMD12 -DTARGET_K64F -DTOOLCHAIN_ARM -DTOOLCHAIN_ARM_STD")
+set(YOTTA_TARGET_DEFINITIONS "-DCPU_MK64FN1M0VMD12 -DTARGET_K64F -DTOOLCHAIN_ARM -DTOOLCHAIN_ARM_STD -DMBED_OPERATORS")
 
 # post-process elf files into .bin files:
-#set(YOTTA_POSTPROCESS_COMMAND "arm-none-eabi-objcopy -O binary YOTTA_CURRENT_EXE_NAME YOTTA_CURRENT_EXE_NAME.bin")
+set(YOTTA_POSTPROCESS_COMMAND "fromelf --bin YOTTA_CURRENT_EXE_NAME --output YOTTA_CURRENT_EXE_NAME.bin")
 
 # Set the compiler to ARMCC
 include(CMakeForceCompiler)
