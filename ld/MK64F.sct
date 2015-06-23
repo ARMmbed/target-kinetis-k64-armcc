@@ -9,7 +9,7 @@ LR_IROM1 0x00000000 0x100000  {    ; load region size_region (1000k)
     uvisor-lib.a (+RW +ZI)
   }
 
-  ARM_LIB_STACK +0 AlignExpr(+0, 8) EMPTY 0x8000 {}
+  ARM_LIB_STACK AlignExpr(+0, 8) EMPTY 0x8000 {}
 
   RW_IRAM1 +0 {
     .ANY(+RW +ZI)
