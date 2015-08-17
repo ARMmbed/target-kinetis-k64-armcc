@@ -18,7 +18,10 @@
     "frdm-k64f",
     "armcc"
   ],
-  "config": {},
+  "config": {
+      "mbed-os": {
+      }
+  },
   "similarTo": [
     "frdm-k64f",
     "k64f",
