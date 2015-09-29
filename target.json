@@ -9,7 +9,7 @@
     }
   ],
   "inherits": {
-    "mbed-armcc": "~0.0.0"
+    "mbed-armcc": "~0.1.0"
   },
   "keywords": [
     "mbed-target:k64f",
