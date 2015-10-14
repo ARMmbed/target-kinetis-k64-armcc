@@ -1,3 +1,7 @@
+## 0.1.4
+ * add hardware.test-pins config to indicate which pins should be used by
+   tests.
+
 ## 0.1.3
  * use soft floating point, as [uvisor](https://github.com/ARMmbed/uvisor)
    doesn't support the FPU yet.
