@@ -43,7 +43,7 @@
     "mk64fn",
     "freescale",
     "cortex-m4",
-    "armv7-m",
+    "armv7-m"
   ],
   "toolchain": "CMake/toolchain.cmake",
   "scripts": {
