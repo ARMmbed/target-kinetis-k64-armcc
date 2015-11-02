@@ -1,7 +1,7 @@
 {
-  "name": "frdm-k64f-armcc",
-  "version": "0.1.5",
-  "description": "Official mbed build target for the mbed frdm-k64f development board, using the armcc toolchain.",
+  "name": "kinetis-k64-armcc",
+  "version": "1.0.0",
+  "description": "Official mbed build target for Freescale Kinetis K64 family chips, using the armcc toolchain.",
   "licenses": [
     {
       "url": "https://spdx.org/licenses/Apache-2.0",
@@ -12,20 +12,17 @@
     "mbed-armcc": "~0.1.0"
   },
   "keywords": [
-    "mbed-target:k64f",
     "mbed-official",
     "mbed",
-    "k64f",
-    "frdm-k64f",
+    "kinetis",
+    "kinetis-k64",
+    "freescale",
+    "mk64f",
+    "mk64fn1m0vll12",
     "armcc"
   ],
   "config": {
     "mbed-os": {
-      "net": {
-        "stacks": {
-          "lwip": true
-        }
-      }
     },
     "cmsis": {
       "nvic": {
@@ -36,64 +33,9 @@
       }
     },
     "hardware": {
-      "pins": {
-        "LED_RED": "PTB22",
-        "LED_GREEN": "PTE26",
-        "LED_BLUE": "PTB21",
-        "LED1": "LED_RED",
-        "LED2": "LED_GREEN",
-        "LED3": "LED_BLUE",
-        "LED4": "LED_RED",
-        "SW2": "PTC6",
-        "SW3": "PTA4",
-        "USBTX": "PTB17",
-        "USBRX": "PTB16",
-        "D0": "PTC16",
-        "D1": "PTC17",
-        "D2": "PTB9",
-        "D3": "PTA1",
-        "D4": "PTB23",
-        "D5": "PTA2",
-        "D6": "PTC2",
-        "D7": "PTC3",
-        "D8": "PTA0",
-        "D9": "PTC4",
-        "D10": "PTD0",
-        "D11": "PTD2",
-        "D12": "PTD3",
-        "D13": "PTD1",
-        "D14": "PTE25",
-        "D15": "PTE24",
-        "I2C_SCL": "D15",
-        "I2C_SDA": "D14",
-        "A0": "PTB2",
-        "A1": "PTB3",
-        "A2": "PTB10",
-        "A3": "PTB11",
-        "A4": "PTC10",
-        "A5": "PTC11",
-        "DAC0_OUT": "0xFEFE"
-      },
-      "test-pins": {
-        "spi": {
-          "mosi": "PTD2",
-          "miso": "PTD3",
-          "sclk": "PTD1",
-          "ssel": "PTD0"
-        },
-        "i2c": {
-          "sda": "PTE25",
-          "scl": "PTE24"
-        },
-        "serial": {
-          "tx": "PTC17",
-          "rx": "PTD2"
-        }
-      }
     }
   },
   "similarTo": [
-    "frdm-k64f",
     "k64f",
     "ksdk-mcu",
     "mk64fn1m0vmd12",
@@ -102,9 +44,6 @@
     "freescale",
     "cortex-m4",
     "armv7-m",
-    "lwip",
-    "lwip-k64f",
-    "eth-k64f"
   ],
   "toolchain": "CMake/toolchain.cmake",
   "scripts": {
