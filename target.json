@@ -1,6 +1,6 @@
 {
   "name": "kinetis-k64-armcc",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Official mbed build target for Freescale Kinetis K64 family chips, using the armcc toolchain.",
   "licenses": [
     {
@@ -22,8 +22,7 @@
     "armcc"
   ],
   "config": {
-    "mbed-os": {
-    },
+    "mbed-os": {},
     "cmsis": {
       "nvic": {
         "ram_vector_address": "0x1FFF0000",
@@ -32,8 +31,7 @@
         "user_irq_number": 86
       }
     },
-    "hardware": {
-    }
+    "hardware": {}
   },
   "similarTo": [
     "k64f",
